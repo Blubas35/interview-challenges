@@ -1,0 +1,76 @@
+.md.hydrated {
+    padding: 10px;
+    background-color: #272e3f;
+    border-radius: 100%;
+    color: #f8b111;
+}
+
+.survey-form-wrapper {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    background-color: #1e242e;
+    padding: 20px;
+}
+
+.survey-info {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.survey-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.sub-title {
+    margin: 0;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.submit-button {
+    border-radius: 15px;
+    padding: 7px;
+    color:white;
+    background-color: #f8b111;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: 1px solid #f8b111;
+}
+
+.submit-button:hover {
+    color: #f8b111;
+    background-color: white;
+    border: 1px solid white;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #272e3f;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #f8b111;
+    color: #fff;
+}
+
+input[type="radio"]:not(:checked):hover+label {
+    background-color: #7d8796;
+}

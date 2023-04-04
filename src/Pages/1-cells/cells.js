@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Buttons from './ArrayComponents/Buttons'
 import CellsItem from './ArrayComponents/CellsItem'
 import ResultsWrapper from './ArrayComponents/ResultsWrapper'
@@ -50,7 +50,7 @@ const Cells = () => {
         setResults([])
         SetHideInfo(true)
     }
-    
+
     return (
         <>
             <Container>
