@@ -5,8 +5,14 @@
     color: #f8b111;
 }
 
+.rating-page.container {
+    display: flex;
+    align-items: center;
+    height: 100svh;
+}
+
 .survey-form-wrapper {
-    max-width: 280px;
+    max-width: 298px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
@@ -20,7 +26,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 30px;
 }
 
 .survey-title {
@@ -31,13 +37,18 @@
 .sub-title {
     margin: 0;
     font-size: 13px;
+    color: #c4c4c4;
     font-weight: lighter;
+}
+
+.form-control {
+    text-align: center;
 }
 
 .submit-button {
     border-radius: 15px;
     padding: 7px;
-    color:white;
+    color: white;
     background-color: #f8b111;
     letter-spacing: 2px;
     cursor: pointer;
@@ -74,3 +85,4 @@ input[type="radio"]:checked+label {
 input[type="radio"]:not(:checked):hover+label {
     background-color: #7d8796;
 }
+

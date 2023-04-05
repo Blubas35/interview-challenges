@@ -15,7 +15,7 @@ const TopNavBar = () => {
     <div className={`topnav ${isResponsive ? 'responsive' : ''}`} id="myTopnav">
       <NavLink to='/homePage' className="active">Home</NavLink>
       <NavLink to='/reviews'>Reviews</NavLink>
-      <NavLink to='/books'>Book list</NavLink>
+      <NavLink to='/rating'>Rating</NavLink>
       <NavLink to='/cells'>Cells</NavLink>
       <NavLink className="icon" onClick={() => handleMenuClick()}>
         <i className="fa fa-bars"></i>

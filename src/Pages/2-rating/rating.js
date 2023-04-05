@@ -1,41 +1,54 @@
 import React, { useState } from 'react'
-import '../../Styles/Rating/Rating.css'
-import logo from '../../Assets/star-img.jpg'
+import Container from '../../Components/Container/Container'
+import Submitted from './rating-components/Submitted'
+import SurveyForm from './rating-components/SurveyForm'
 
 const Rating = () => {
-    const [radio, setRadio] = useState()
+    const [selectedRating, setSelectedRating] = useState('')
+    const [isSurveySubmit, setIsSurveySubmit] = useState(false)
+    const [errorMessage, setErrorMessage] = useState(false)
+
+    const subText = 'Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!'
+    const title = 'How did we do?'
+
+    const radioHandler = (e) => setSelectedRating(e.target.value)
+
+    const submitHandler = (e) => {
+        e.preventDefault()
+
+        if (selectedRating === '') {
+            setErrorMessage(true)
+            setIsSurveySubmit(false)
+        } else {
+            setIsSurveySubmit(!isSurveySubmit)
+        }
+    }
+
+    const backButtonHandler = () => {
+        setIsSurveySubmit(!isSurveySubmit)
+        setErrorMessage(false)
+        setSelectedRating('')
+    }
+
 
     return (
         <>
-            {/* <h1>How did we do?</h1> */}
-            <div className='survey-form-wrapper'>
-                <div className='image-wrapper'>
-                    <ion-icon name="star"></ion-icon>
-                </div>
-                <form>
-                    <fieldset className='survey-info'>
-                        <legend className='survey-title'>How did we do?</legend>
-                        <h2 className='sub-title'>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</h2>
-                        <div className='form-control'>
-                            <input type='radio' id='one' name='survey-rating'></input>
-                            <label htmlFor='one'>1</label>
-
-                            <input type='radio' name='survey-rating' id='two'></input>
-                            <label htmlFor='two'>2</label>
-
-                            <input type='radio' name='survey-rating' id='three'></input>
-                            <label htmlFor='three'>3</label>
-
-                            <input type='radio' name='survey-rating' id='four'></input>
-                            <label htmlFor='four'>4</label>
-
-                            <input type='radio' name='survey-rating' id='five'></input>
-                            <label htmlFor='five'>5</label>
-                        </div>
-                        <input className='submit-button' type='submit' value='SUBMIT'></input>
-                    </fieldset>
-                </form>
-            </div>
+            <Container className='rating-page'>
+                {!isSurveySubmit ? (
+                    <SurveyForm
+                    radioHandler={radioHandler}
+                    submitHandler={submitHandler}
+                    subText={subText}
+                    title={title}
+                    errorMessage={errorMessage}
+                    ></SurveyForm>
+                ) : (
+                    <Submitted
+                    backButtonHandler={backButtonHandler}
+                    selectedRating={selectedRating}
+                    ></Submitted>
+                )}
+            </Container>
         </>
     )
 }

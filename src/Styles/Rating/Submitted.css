@@ -1,0 +1,35 @@
+.submitted-survey-wrapper {
+    max-width: 298px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    background-color: #1e242e;
+    padding: 20px;
+}
+
+.submitted-description {
+    font-size: 13px;
+    color: #c4c4c4;
+}
+
+.submitted-survey-wrapper {
+    text-align: center;
+}
+
+.rating-selected {
+    font-size: 12px;
+    background-color: #272e3f;
+    padding: 5px 9px;
+    border-radius: 15px;
+    color: #d79500;
+}
+
+.back-button-link {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.back-button-wrapper {
+    text-align: left;
+}
