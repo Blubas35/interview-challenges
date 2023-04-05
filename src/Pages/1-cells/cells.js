@@ -4,7 +4,7 @@ import CellsItem from './ArrayComponents/CellsItem'
 import ResultsWrapper from './ArrayComponents/ResultsWrapper'
 import '../../Styles/Cells/Cells.css'
 import Container from '../../Components/Container/Container'
-import Header from './ArrayComponents/Header'
+import Header from '../../Components/Header/Header'
 
 const Cells = () => {
 
@@ -13,6 +13,9 @@ const Cells = () => {
     const [cells, setCells] = useState(initialArr)
     const [results, setResults] = useState([])
     const [hideInfo, SetHideInfo] = useState(true)
+
+    const title = 'Demonstrating Data Structure and Array Manipulation with React.'
+    const contentText = 'Doing this small project I was using click events, useState, props and other JavaScript methods (filter, map) to demonstrate my skills.'
 
     const changeCellContent = (newCellValue, index) => {
         setCells(prevState => {
@@ -55,7 +58,10 @@ const Cells = () => {
         <>
             <Container>
                 <div className='content-wrapper'>
-                    <Header />
+                    <Header 
+                    title={title}
+                    contentText={contentText}
+                    />
                     <section className='cells'>
                         <h2>Click between cells to add more cells!</h2>
                         <CellsItem

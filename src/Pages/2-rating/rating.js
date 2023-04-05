@@ -2,14 +2,18 @@ import React, { useState } from 'react'
 import Container from '../../Components/Container/Container'
 import Submitted from './rating-components/Submitted'
 import SurveyForm from './rating-components/SurveyForm'
+import Header from '../../Components/Header/Header'
 
 const Rating = () => {
     const [selectedRating, setSelectedRating] = useState('')
     const [isSurveySubmit, setIsSurveySubmit] = useState(false)
     const [errorMessage, setErrorMessage] = useState(false)
 
+    const title = 'Building Interactive User Rating Survey with React. DOM Manipulation and HTML Element Usage'
+    const contentText = 'Doing this small project I was using click events, useState hooks, and props. I also leveraged HTML elements and DOM manipulation techniques.'
+
     const subText = 'Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!'
-    const title = 'How did we do?'
+    const surveyTitle = 'How did we do?'
 
     const radioHandler = (e) => setSelectedRating(e.target.value)
 
@@ -34,12 +38,16 @@ const Rating = () => {
     return (
         <>
             <Container className='rating-page'>
+                <Header 
+                title={title}
+                contentText={contentText}
+                />
                 {!isSurveySubmit ? (
                     <SurveyForm
                     radioHandler={radioHandler}
                     submitHandler={submitHandler}
                     subText={subText}
-                    title={title}
+                    surveyTitle={surveyTitle}
                     errorMessage={errorMessage}
                     ></SurveyForm>
                 ) : (

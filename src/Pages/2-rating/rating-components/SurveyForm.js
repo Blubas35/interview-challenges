@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../../Styles/Rating/Rating.css'
 
-const SurveyForm = ({ submitHandler, radioHandler, subText, title, errorMessage }) => {
+const SurveyForm = ({ submitHandler, radioHandler, subText, surveyTitle, errorMessage }) => {
     return (
         <div className='survey-form-wrapper'>
             {errorMessage &&
@@ -12,7 +12,7 @@ const SurveyForm = ({ submitHandler, radioHandler, subText, title, errorMessage 
             </div>
             <form onSubmit={submitHandler}>
                 <fieldset onChange={radioHandler} className='survey-info' aria-required>
-                    <legend className='survey-title'>{title}</legend>
+                    <legend className='survey-title'>{surveyTitle}</legend>
                     <h2 className='sub-title'>{subText}</h2>
                     <div className='form-control'>
                         <input type='radio' id='one' name='survey-rating' value='1'></input>
