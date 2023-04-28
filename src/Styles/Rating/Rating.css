@@ -8,7 +8,8 @@
 .rating-page.container {
     display: flex;
     align-items: center;
-    height: 100svh;
+    flex-direction: column;
+    row-gap: 30px;
 }
 
 .survey-form-wrapper {
@@ -85,4 +86,3 @@ input[type="radio"]:checked+label {
 input[type="radio"]:not(:checked):hover+label {
     background-color: #7d8796;
 }
-

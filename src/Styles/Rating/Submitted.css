@@ -33,3 +33,8 @@
 .back-button-wrapper {
     text-align: left;
 }
+
+
+.back-button-link:hover path {
+    fill: white;
+}

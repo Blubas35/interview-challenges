@@ -1,6 +1,6 @@
 import React from 'react'
 import thankYou from '../../../Assets/thank-you-3006975.svg'
-import backButton from '../../../Assets/back-button.png'
+import backButton from '../../../Assets/back-button.svg'
 import '../../../Styles/Rating/Submitted.css'
 
 const Submitted = ({ backButtonHandler, selectedRating }) => {
