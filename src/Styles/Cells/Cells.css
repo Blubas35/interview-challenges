@@ -81,3 +81,14 @@
     display: flex;
     column-gap: 15px;
 }
+
+@media (max-width: 450px) {
+    .cells-item {
+        justify-content: center;
+    }
+    .plus {
+        right: 93px;
+        bottom: -103px;
+        transform: rotate(90deg);
+    }
+}

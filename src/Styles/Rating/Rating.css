@@ -86,3 +86,9 @@ input[type="radio"]:checked+label {
 input[type="radio"]:not(:checked):hover+label {
     background-color: #7d8796;
 }
+
+@media (max-width: 450px) {
+    .rating-page.container {
+        padding-bottom: 50px;
+    }
+}

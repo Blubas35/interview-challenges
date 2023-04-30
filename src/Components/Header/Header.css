@@ -6,3 +6,10 @@
     padding-right: 30px;
     margin-top: 30px;
 }
+
+@media (max-width: 450px) {
+    .hero-box-wrapper {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
