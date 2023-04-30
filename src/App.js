@@ -12,7 +12,6 @@ function App() {
       <Routes>
         <Route path='/cells' element={<Cells />}></Route>
         <Route path='/rating' element={<Rating />} />
-        <Route path='/' element={<MainNavigation />}></Route>
       </Routes>
     </div>
   );
